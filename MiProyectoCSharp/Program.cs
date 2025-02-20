@@ -12,3 +12,6 @@
     
     return null;
 }
+
+autentification.ClientCredencials.ClientCertificate.Certificate = certi[0];
+string token = autentification.Autentica();
