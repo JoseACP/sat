@@ -1,0 +1,4 @@
+/Users/pepe/Desktop/proyectos/sat_conexion/MiProyectoCSharp/obj/Debug/net9.0/MiProyectoCSharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pepe/Desktop/proyectos/sat_conexion/MiProyectoCSharp/obj/Debug/net9.0/MiProyectoCSharp.AssemblyInfoInputs.cache
+/Users/pepe/Desktop/proyectos/sat_conexion/MiProyectoCSharp/obj/Debug/net9.0/MiProyectoCSharp.AssemblyInfo.cs
+/Users/pepe/Desktop/proyectos/sat_conexion/MiProyectoCSharp/obj/Debug/net9.0/MiProyectoCSharp.csproj.CoreCompileInputs.cache

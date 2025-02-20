@@ -1,0 +1,60 @@
+private static X509Certificate2 ObtenerKey(string thumbprint)
+{
+    X509Store store = new X509Store(StoreName.My, StoreLocation.LocalMachine);
+    store.Open(OpenFlags.ReadOnly);
+    var certificates = store.Certificates;
+    var certificatesEnc = certificates.Find(X509FindType.FindByThumbprint, thumbprint, false);
+    if (certificatesEnc.Count > 0)
+    {
+        X509Certificate2 certificate = certificatesEnc[0];
+        return certificate;
+    }
+    
+    return null;
+}
+
+
+// using System;
+// using System.Security.Cryptography.X509Certificates;
+
+// class Program
+// {
+//     // Método para buscar un certificado por su thumbprint
+//     private static X509Certificate2 ObtenerKey(string thumbprint)
+//     {
+//         X509Store store = new X509Store(StoreName.My, StoreLocation.LocalMachine);
+//         store.Open(OpenFlags.ReadOnly);
+//         var certificates = store.Certificates;
+//         var certificatesEnc = certificates.Find(X509FindType.FindByThumbprint, thumbprint, false);
+//         if (certificatesEnc.Count > 0)
+//         {
+//             X509Certificate2 certificate = certificatesEnc[0];
+//             return certificate;
+//         }
+//         return null;
+//     }
+
+//     // Método principal (punto de entrada del programa)
+//     static void Main(string[] args)
+//     {
+//         // Thumbprint del certificado que deseas buscar
+//         string thumbprint = "A123B456C789D012E345F678G901H234I567J890"; // Reemplaza con tu thumbprint
+
+//         // Llamar al método para obtener el certificado
+//         X509Certificate2 certificado = ObtenerKey(thumbprint);
+
+//         // Verificar si se encontró el certificado
+//         if (certificado != null)
+//         {
+//             Console.WriteLine("Certificado encontrado:");
+//             Console.WriteLine($"Sujeto: {certificado.Subject}");
+//             Console.WriteLine($"Emisor: {certificado.Issuer}");
+//             Console.WriteLine($"Válido desde: {certificado.NotBefore}");
+//             Console.WriteLine($"Válido hasta: {certificado.NotAfter}");
+//         }
+//         else
+//         {
+//             Console.WriteLine("No se encontró ningún certificado con el thumbprint proporcionado.");
+//         }
+//     }
+// }
